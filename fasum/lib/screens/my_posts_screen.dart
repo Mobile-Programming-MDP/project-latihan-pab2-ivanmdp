@@ -198,7 +198,8 @@ class _MyPostsScreenState extends State<MyPostsScreen> {
                                       color: Colors.red),
                                   onPressed: () async {
                                     // Call the delete function
-                                    await _deletePost(posts[index].id, this.context);
+                                    await _deletePost(
+                                        posts[index].id, this.context);
                                   },
                                 ),
                               ],

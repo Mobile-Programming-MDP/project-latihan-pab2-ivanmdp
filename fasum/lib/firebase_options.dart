@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -49,22 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC3ai2RLeDkIVE1ouKIRAj54FADKM7EysI',
-    appId: '1:297417949941:web:3288fe179b3121c020bbbc',
-    messagingSenderId: '297417949941',
-    projectId: 'fasum-j',
-    authDomain: 'fasum-j.firebaseapp.com',
-    databaseURL: 'https://fasum-j-default-rtdb.firebaseio.com',
-    storageBucket: 'fasum-j.firebasestorage.app',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCGwtTC4MDmcLyI-H55ucEOc2w9jGzM37A',
-    appId: '1:297417949941:android:a890c1698a91914920bbbc',
-    messagingSenderId: '297417949941',
-    projectId: 'fasum-j',
-    databaseURL: 'https://fasum-j-default-rtdb.firebaseio.com',
-    storageBucket: 'fasum-j.firebasestorage.app',
+    apiKey: 'AIzaSyBnPBJW_qtrLBOXN44ibhhQn06GqUo4VBw',
+    appId: '1:605314374949:android:863c051a4ecde03b004ecc',
+    messagingSenderId: '605314374949',
+    projectId: 'fasum-b70b8',
+    storageBucket: 'fasum-b70b8.firebasestorage.app',
   );
 }
